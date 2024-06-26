@@ -2,7 +2,7 @@ function sendToWhatsApp() {
     // Obtenha os valores dos campos do formulário
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
-    const msg = document.getElementById('mensagem').value;
+    const msg = document.getElementById('msg').value;
     
 
     // Verifique se todos os campos estão preenchidos
