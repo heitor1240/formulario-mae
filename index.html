@@ -30,7 +30,7 @@
             margin-bottom: 5px;
             font-weight: bold;
         }
-        input[type="text"], input[type="email"],  input[type="msg"], textarea {
+        input[type="text"], input[type="email"],  input[type="msg"], input[type="tel"], textarea {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
@@ -41,21 +41,38 @@
             resize: vertical;
         }
         button {
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px; /* Espaço entre a imagem e o texto */
             padding: 10px 20px;
-            background-color: #007bff;
+            background-color: #29a71a;
             color: #fff;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
+          
+        }
+        button img {
+            margin-right: 10px;
+            width: 22px;
+            height: 22px;
+            
+
         }
         button:hover {
-            background-color: #0056b3;
+            background-color: #57d40e;
         }
+        
     </style>
 </head>
 <body>
+    
     <form id="contactForm">
+        <h1 style="font-family: Arial, sans-serif; 
+        font-size: 25px;">Faça seu agendamento:</h1>
         <div class="form-group">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
@@ -65,10 +82,17 @@
             <input type="email" id="email" name="email" required>
         </div>
         <div class="form-group">
+            <label for="numeroWhatsApp1">Número do WhatsApp:</label>
+            <input type="tel" id="numeroWhatsApp1" name="numeroWhatsApp" placeholder="Ex: 5591999999999" required>
+        </div>
+        <div class="form-group">
             <label for="msg">Mensagem:</label>
             <input type="text" id="msg" name="msg" required>
         </div>
-        <button type="button" onclick="sendToWhatsApp()">Enviar</button>
+        
+        <button    type="button" onclick="sendToWhatsApp()"> <img src="whatsapp.png" alt="Logo">Enviar no WhatsApp
+           
+        </button>
     </form>
 
     <script src="script.js"></script>
